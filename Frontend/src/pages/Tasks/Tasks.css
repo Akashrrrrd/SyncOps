@@ -1,0 +1,154 @@
+.tasks-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.tasks-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-buttons button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #e2e6ea;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.task-input-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.task-input-container input,
+.task-input-container select {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 150px;
+}
+
+.task-input-container input[type="date"] {
+  width: 160px;
+}
+
+.task-input-container button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.task-input-container button:hover {
+  background-color: #218838;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.task-item:hover {
+  background-color: #f1f3f5;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.priority {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.priority.low {
+  background-color: #28a745;
+}
+
+.priority.medium {
+  background-color: #ffc107;
+}
+
+.priority.high {
+  background-color: #dc3545;
+}
+
+.task-meta {
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  gap: 20px;
+}
+
+.assignee,
+.deadline {
+  font-weight: 500;
+}
+
+.task-status select {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 14px;
+}

@@ -1,0 +1,145 @@
+:root {
+  --navbar-height: 60px;
+  --sidebar-width: 240px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  margin-top: 8px;
+  background-color: #1f1f2f;
+  height: calc(100vh - var(--navbar-height));
+  position: fixed;
+  top: var(--navbar-height);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: width 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  overflow-y: auto;
+  z-index: 1000;
+  will-change: width, transform;
+}
+
+.sidebar.expanded {
+  width: 240px;
+  transform: translate3d(0, 0, 0);
+}
+
+.sidebar.collapsed {
+  width: 70px;
+  transform: translate3d(0, 0, 0);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-button:hover {
+  color: #61dafb;
+  transform: scale(1.1);
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  margin: 0.5rem 0;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  border-radius: 0 20px 20px 0;
+}
+
+.sidebar-link:hover {
+  background-color: #282b3f;
+  color: #fff;
+  transform: translate3d(0, 0, 0);
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #61dafb;
+  transition: transform 0.3s ease;
+}
+
+.label {
+  margin-left: 1rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.active-link {
+  background-color: #61dafb;
+  color: #1f1f2f;
+}
+
+.active-link .icon {
+  color: #1f1f2f;
+}
+
+.sidebar.collapsed .label {
+  opacity: 0;
+}
+
+.sidebar.collapsed .icon:hover {
+  transform: scale(1.2);
+}
+
+.sidebar.collapsed .sidebar-link {
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    left: -240px;
+  }
+
+  .sidebar.expanded {
+    left: 0;
+  }
+
+  .sidebar.collapsed {
+    left: -70px;
+  }
+}
+
+.main-content {
+  margin-left: var(--sidebar-width);
+  padding: 20px;
+  transition: margin-left 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+}

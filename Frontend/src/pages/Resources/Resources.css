@@ -1,0 +1,207 @@
+.re-resources-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .re-resources-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  
+  .re-resources-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .re-search-container {
+    display: flex;
+    align-items: center;
+    width: 60%;
+  }
+  
+  .re-search-icon {
+    margin-right: 10px;
+    color: #7f8c8d;
+    display: none;
+  }
+  
+  .re-search-bar {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .re-search-bar:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  
+  .re-filter-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .re-filter-button {
+    padding: 10px 20px;
+    background-color: #ecf0f1;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .re-filter-button.re-active,
+  .re-filter-button:hover {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .re-resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+  }
+  
+  .re-resource-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .re-resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .re-resource-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .re-resource-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .re-resource-description {
+    font-size: 16px;
+    color: #7f8c8d;
+  }
+  
+  .re-resource-date {
+    font-size: 14px;
+    color: #bdc3c7;
+    margin-top: 5px;
+  }
+  
+  .re-tags {
+    margin-top: 10px;
+  }
+  
+  .re-tag {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+  
+  .re-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .re-page-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .re-page-button.re-active,
+  .re-page-button:hover {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .re-resource-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .re-modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  
+  .re-close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #e74c3c;
+  }
+  
+  .re-modal-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .re-modal-title {
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  .re-modal-description {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 25px;
+  }
+  
+  .re-modal-link {
+    font-size: 18px;
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .re-modal-link:hover {
+    text-decoration: underline;
+  }
+  
